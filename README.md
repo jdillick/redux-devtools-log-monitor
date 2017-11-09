@@ -1,7 +1,9 @@
 Redux DevTools Log Monitor
 =========================
 
-The default monitor for [Redux DevTools](https://github.com/gaearon/redux-devtools) with a tree view.  
+**Note**: This is a temporary fork of the [redux-devtools-log-monitor](https://github.com/gaearon/redux-devtools-log-monitor.git), created to remove the error caused by older [react-json-tree](https://github.com/gaearon/redux-devtools-log-monitor/pull/71). I plan to deprecate this package after this PR is merged.
+
+The default monitor for [Redux DevTools](https://github.com/gaearon/redux-devtools) with a tree view.
 It shows a log of states and actions, and lets you change their history.
 
 ![](http://i.imgur.com/J4GeW0M.gif)
@@ -9,7 +11,7 @@ It shows a log of states and actions, and lets you change their history.
 ### Installation
 
 ```
-npm install --save-dev redux-devtools-log-monitor
+npm install --save-dev redux-devtools-log-monitor-react16
 ```
 
 ### Usage
@@ -21,7 +23,7 @@ You can use `LogMonitor` as the only monitor in your app:
 ```js
 import React from 'react';
 import { createDevTools } from 'redux-devtools';
-import LogMonitor from 'redux-devtools-log-monitor';
+import LogMonitor from 'redux-devtools-log-monitor-react16';
 
 export default createDevTools(
   <LogMonitor />
@@ -30,7 +32,7 @@ export default createDevTools(
 
 Then you can render `<DevTools>` to any place inside app or even into a separate popup window.
 
-Alternative, you can use it together with [`DockMonitor`](https://github.com/gaearon/redux-devtools-dock-monitor) to make it dockable.  
+Alternative, you can use it together with [`DockMonitor`](https://github.com/gaearon/redux-devtools-dock-monitor) to make it dockable.
 Consult the [`DockMonitor` README](https://github.com/gaearon/redux-devtools-dock-monitor) for details of this approach.
 
 [Read how to start using Redux DevTools.](https://github.com/gaearon/redux-devtools)
